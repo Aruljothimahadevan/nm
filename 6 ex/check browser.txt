@@ -1,0 +1,5 @@
+INSERT INTO student (name, age) VALUES ('Arun', 20), ('Bala', 22);
+
+http://localhost:8080/students/update-test/1
+
+http://localhost:8080/students/all

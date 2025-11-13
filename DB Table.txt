@@ -1,0 +1,32 @@
+-- Create database
+CREATE DATABASE studentdb;
+USE studentdb;
+
+-- Create table
+CREATE TABLE student (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50)
+);
+
+-- Insert sample data
+INSERT INTO student (name) VALUES
+('Arun'),
+('Bala'),
+('Chitra'),
+('Divya'),
+('Eshan'),
+('Fathima'),
+('Gokul'),
+('Hari'),
+('Indu'),
+('Jaya'),
+('Kavin'),
+('Latha'),
+('Mani'),
+('Nisha'),
+('Om'),
+('Priya'),
+('Ravi'),
+('Sita'),
+('Tina'),
+('Vijay');

@@ -1,0 +1,83 @@
+
+INSERT INTO student (name, age) VALUES ('Arun', 20), ('Bala', 25);
+
+1️⃣ Create a Student
+
+Request:
+
+POST http://localhost:8080/students/create
+Body:
+{ "name":"Chitra", "age":22 }
+
+
+Output (JSON):
+
+{
+  "id": 3,
+  "name": "Chitra",
+  "age": 22
+}
+
+
+id is auto-generated.
+
+2️⃣ Read All Students
+
+Request:
+
+GET http://localhost:8080/students/all
+
+
+Output (JSON):
+
+[
+  { "id": 1, "name": "Arun", "age": 20 },
+  { "id": 2, "name": "Bala", "age": 25 },
+  { "id": 3, "name": "Chitra", "age": 22 }
+]
+
+3️⃣ Read Student by ID
+
+Request:
+
+GET http://localhost:8080/students/2
+
+
+Output (JSON):
+
+{
+  "id": 2,
+  "name": "Bala",
+  "age": 25
+}
+
+4️⃣ Update a Student
+
+Request:
+
+PUT http://localhost:8080/students/update/1
+Body:
+{ "name":"Arun Kumar", "age":21 }
+
+
+Output (JSON):
+
+{
+  "id": 1,
+  "name": "Arun Kumar",
+  "age": 21
+}
+
+5️⃣ Delete a Student
+
+Request:
+
+DELETE http://localhost:8080/students/delete/3
+
+
+Output (Text):
+
+Student deleted with id: 3
+
+
+After deletion, if you call /students/all, only Arun Kumar and Bala remain.
